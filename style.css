@@ -88,7 +88,7 @@ button {
     background-color: rgb(76, 138, 109);
     border-radius: 6px;
     border: 1px solid rgb(153, 153, 153);
-    color: rgb(221, 221, 221);
+    color: aliceblue;
     width: 30%;
     cursor: pointer;
 }
@@ -102,4 +102,10 @@ button {
 
 .invalid {
     border: 1px solid rgb(158, 77, 77);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(76, 138, 109) ;
+    font-weight: 700;
 }
