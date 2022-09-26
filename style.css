@@ -30,7 +30,7 @@ form {
     display: flex;
     flex-direction: column;
     background-color: rgba(17, 20, 24, 0.8);
-    font-size: 1vw;
+    font-size: 1.1vw;
     font-family: sans-serif;
     width: 45%;
     padding: 1% 0 3%;
@@ -72,10 +72,11 @@ input {
     padding: 4% 0;
     background-color: rgb(80, 77, 90);
     color:aliceblue ;
+    width: 10vw;
 }
 
 label {
-    font-size: 0.8vw;
+    font-size: 0.9vw;
     color: rgb(167, 167, 167);
 }
 
@@ -91,6 +92,7 @@ button {
     color: aliceblue;
     width: 30%;
     cursor: pointer;
+    font-size: 0.9vw;
 }
 
 .password p {
@@ -102,10 +104,84 @@ button {
 
 .invalid {
     border: 1px solid rgb(158, 77, 77);
+    background-color: rgba(158, 77, 77, 20%)
 }
 
 a {
     text-decoration: none;
     color: rgb(76, 138, 109) ;
     font-weight: 700;
+}
+
+@media screen and (max-width:1200px) {
+    form {
+        width: 100%;
+        font-size: 2vw;
+    }
+
+    input {
+        width: 20vw;
+    }
+
+    label {
+        font-size: 2vw;
+    }
+
+    button {
+        font-size: 2vw;
+    }
+
+    .password p {
+        font-size: 1.2vw;
+    }
+}
+
+@media screen and (max-width:600px) {
+    form {
+        width: 100%;
+        font-size: 4vw;
+    }
+
+    .form-inputs div {
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    label {
+        font-size: 4vw;
+    }
+
+    button {
+        font-size: 4vw;
+    }
+
+    .password p {
+        font-size: 2.4vw;
+    }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid rgb(153, 153, 153);
+  -webkit-text-fill-color: aliceblue;
+  box-shadow: 0 0 0px 1000px rgb(80, 77, 90) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+button:hover {
+    background-color: rgb(48, 85, 68);
+}
+
+a:hover {
+    color: rgb(48, 85, 68);
 }
