@@ -27,7 +27,7 @@ function removeInvalidStyle () {
 
 
 $inputs.forEach((input) => {
-    input.addEventListener("invalid", showInvalidInput)
+    input.addEventListener("focus", showInvalidInput)
 })
 
 $inputs.forEach((input) => {
