@@ -12,39 +12,45 @@
 
 <body>
     <div class="container">
-        <form action="#">
+        <form action="#" novalidate>
             <h2>Frogy!</h2>
             <h3>Welcome to Frogy! the most frogy frog of all frogs</h3>
             <h3>You <i>know</i> you want to</h3>
             <div class="form-inputs">
                 <h4>Let's do this!</h4>
-                <div class="first-name">
-                    <label for="first-name">First Name</label>
-                    <input type="text" id="first-name" name="first-name"  minlength="1" required>
+                <div class="first-name_container input_div">
+                    <label for="first-name">*First Name</label>
+                    <input type="text" id="first-name" name="first-name"  minlength="2" maxlength="16" pattern="^[a-zA-Z]+" required>
+                    <p class="error_msg first-name">*"Your name can only contain alphabetic characters"</p>                    
                 </div>
-                <div class="last-name">
-                    <label for="last-name">Last Name</label>
-                    <input type="text" id="last-name" name="last-name" minlength="1" required>
+                <div class="last-name_container input_div">
+                    <label for="last-name">*Last Name</label>
+                    <input type="text" id="last-name" name="last-name" minlength="2" maxlength="16" pattern="^[a-zA-Z]+" required>
+                    <p class="error_msg last-name">*"Your name can only contain alphabetic characters"</p>                  
                 </div>
-                <div class="email">
-                    <label for="email">Email</label>
+                <div class="email_container input_div">
+                    <label for="email">*Email</label>
                     <input type="email" id="email" name="email" required>
+                    <p class="error_msg email">*"Your name can only contain alphabetic characters"</p>
                 </div>
-                <div class="phone-number">
+                <div class="phone-number_container input_div">
                     <label for="phone-number">Phone Number</label>
                     <input type="tel" inputmode="numeric" id="phone-number" name="phone-number" minlength="1">
+                    <p class="error_msg phone">*"Your name can only contain alphabetic characters"</p>
                 </div>
-                <div class="password">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required minlength="4"> 
-                    <p>*Passwords do not match</p>
+                <div class="password_container input_div">
+                    <label for="password">*Password</label>
+                    <input type="password" id="password" name="password" required minlength="6" maxlength="16"> 
+                    <p class="error_msg password">*"Your name can only contain alphabetic characters"</p>
                 </div>
-                <div class="confirm-password">
-                    <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" name="confirm-password" required minlength="4">
+                <div class="confirm-password_container input_div">
+                    <label for="confirm-password">*Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                    <p class="error_msg confirm-password">*"Your name can only contain alphabetic characters"</p>
                 </div>
                 <div class="account">
                     <button type="submit">Create Account</button>
+                    <p class="error_msg invalid-form">Please complete the form correctly</p>
                     <p>Already have an account? <a href="#"> Log in</a></p>
                 </div>
             </div>
