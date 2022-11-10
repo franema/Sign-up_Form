@@ -29,7 +29,7 @@ const checkValidity = (() => {
         }
     }
 
-    return { errors, manageErrors }
+    return { errors, manageErrors, showInvalidStyle }
 
 })()
 
@@ -123,6 +123,7 @@ const validateForm = (() => {
     //DOM
     const $form = document.querySelector("form")
     const $formErrorMessage = document.querySelector(".invalid-form")
+    const $inputs = document.querySelectorAll(".form-inputs input")
 
     //Bind Events
     $form.addEventListener("submit", checkErrors)
@@ -137,6 +138,11 @@ const validateForm = (() => {
         ) {
             e.preventDefault()
             $formErrorMessage.style.opacity = "1"
+            $inputs.forEach((input) => {
+                if(input.value === "") {
+                    checkValidity.showInvalidStyle(input)
+                }
+            })
         }
 
     }
