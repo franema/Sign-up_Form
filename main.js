@@ -95,7 +95,7 @@ const validatePassword = (() => {
     //Functions
     function showPasswordError(e) {
         if (e.target.validity.valueMissing) {
-            checkValidity.errors[e.target.id] = "Enter your password"
+            checkValidity.errors[e.target.id] = "Enter your password                              "
         } else if (e.target.validity.tooShort) {
             checkValidity.errors[e.target.id] = "Your password must contain at least 6 characters"
         } else if (e.target.validity.tooLong) {

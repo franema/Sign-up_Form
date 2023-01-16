@@ -133,7 +133,7 @@ button {
 }
 
 .error_msg {
-    max-width: 100%;
+    width: 17rem;
     font-size: 0.6vw;
     color: rgb(170, 58, 58);
     margin: 2% 0 0;
@@ -171,6 +171,7 @@ a {
 
     .error_msg {
         font-size: 1.2vw;
+        width: 20rem;
     }
 }
 
@@ -212,8 +213,13 @@ a {
         margin-left: 6%;
     }
 
+    .invalid-form {
+        margin-left: 5%;
+    }
+
     button {
         font-size: 4vw;
+        width: 100%;
     }
 
     .error_msg {
